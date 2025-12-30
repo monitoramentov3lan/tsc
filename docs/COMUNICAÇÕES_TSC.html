@@ -50,7 +50,7 @@
     <div class="container header-content">
         <div>
             <h1 style="margin:0">📊 TSC</h1>
-            <small id="last-update">Atualizado: 15:52</small>
+            <small id="last-update">Atualizado: 17:41</small>
         </div>
         <div class="controls-area">
             <input type="text" id="globalSearch" class="search-box" placeholder="🔍 Buscar Veículo...">
@@ -105,55 +105,112 @@
 <script>
     const FROTA = ["303001", "303002"];
     const METADATA = {"303001": {"serie": "66646.0", "versao": "91.13", "eod": "219.0"}, "303002": {"serie": "66372.0", "versao": "91.13", "eod": "218.0"}};
-    const HISTORY = {"303001": [{"d": "2025-12-30 15:34:14", "e": null}, {"d": "2025-12-30 15:03:56", "e": null}, {"d": "2025-12-30 14:33:58", "e": null}, {"d": "2025-12-30 14:03:31", "e": null}, {"d": "2025-12-30 13:33:33", "e": null}, {"d": "2025-12-30 13:03:45", "e": null}, {"d": "2025-12-30 12:32:31", "e": null}, {"d": "2025-12-30 12:01:44", "e": null}, {"d": "2025-12-30 11:31:19", "e": null}, {"d": "2025-12-30 11:01:31", "e": null}, {"d": "2025-12-30 10:31:43", "e": null}, {"d": "2025-12-30 10:00:29", "e": null}, {"d": "2025-12-30 09:30:31", "e": null}, {"d": "2025-12-30 09:00:06", "e": null}, {"d": "2025-12-30 08:29:39", "e": null}, {"d": "2025-12-30 07:59:53", "e": null}, {"d": "2025-12-30 07:28:40", "e": null}, {"d": "2025-12-30 06:58:43", "e": null}, {"d": "2025-12-30 06:28:46", "e": null}, {"d": "2025-12-30 05:58:10", "e": null}, {"d": "2025-12-30 05:28:23", "e": null}, {"d": "2025-12-30 04:58:27", "e": null}, {"d": "2025-12-30 04:27:14", "e": null}, {"d": "2025-12-30 03:57:28", "e": null}, {"d": "2025-12-30 03:26:54", "e": null}, {"d": "2025-12-30 02:57:09", "e": null}, {"d": "2025-12-30 02:27:23", "e": null}, {"d": "2025-12-30 01:56:58", "e": null}, {"d": "2025-12-30 01:26:03", "e": null}, {"d": "2025-12-30 00:55:36", "e": null}, {"d": "2025-12-30 00:25:32", "e": null}, {"d": "2025-12-29 23:55:45", "e": null}, {"d": "2025-12-29 23:24:37", "e": null}, {"d": "2025-12-29 22:55:11", "e": null}, {"d": "2025-12-29 22:24:36", "e": null}, {"d": "2025-12-29 21:54:20", "e": null}, {"d": "2025-12-29 21:23:40", "e": null}, {"d": "2025-12-29 20:54:43", "e": null}, {"d": "2025-12-29 20:24:05", "e": null}, {"d": "2025-12-29 19:54:19", "e": null}, {"d": "2025-12-29 19:23:54", "e": null}, {"d": "2025-12-29 16:22:36", "e": null}, {"d": "2025-12-29 15:52:50", "e": null}, {"d": "2025-12-29 15:21:35", "e": null}, {"d": "2025-12-29 14:52:37", "e": null}, {"d": "2025-12-29 14:22:13", "e": null}, {"d": "2025-12-29 13:51:37", "e": null}, {"d": "2025-12-29 13:21:50", "e": null}, {"d": "2025-12-29 12:50:27", "e": null}, {"d": "2025-12-29 12:21:18", "e": null}, {"d": "2025-12-29 11:50:06", "e": null}, {"d": "2025-12-29 11:20:09", "e": null}, {"d": "2025-12-29 10:50:06", "e": null}, {"d": "2025-12-29 10:20:16", "e": null}, {"d": "2025-12-29 09:49:02", "e": null}, {"d": "2025-12-29 09:19:16", "e": null}, {"d": "2025-12-29 08:48:50", "e": null}, {"d": "2025-12-29 08:18:12", "e": null}, {"d": "2025-12-29 07:48:23", "e": null}, {"d": "2025-12-29 07:17:57", "e": null}, {"d": "2025-12-29 06:48:11", "e": null}, {"d": "2025-12-29 06:16:58", "e": null}, {"d": "2025-12-29 05:47:50", "e": null}, {"d": "2025-12-29 05:15:34", "e": null}, {"d": "2025-12-29 04:45:09", "e": null}, {"d": "2025-12-29 04:15:14", "e": null}, {"d": "2025-12-29 03:44:50", "e": null}, {"d": "2025-12-29 03:14:26", "e": null}, {"d": "2025-12-29 02:44:29", "e": null}, {"d": "2025-12-29 02:14:32", "e": null}, {"d": "2025-12-29 01:44:37", "e": null}, {"d": "2025-12-29 01:14:01", "e": null}, {"d": "2025-12-29 00:44:15", "e": null}, {"d": "2025-12-29 00:13:03", "e": null}], "303002": [{"d": "2025-12-30 12:01:30", "e": null}, {"d": "2025-12-30 04:32:31", "e": null}, {"d": "2025-12-30 04:02:45", "e": null}, {"d": "2025-12-30 03:32:11", "e": null}, {"d": "2025-12-30 03:02:26", "e": null}, {"d": "2025-12-30 02:31:39", "e": null}, {"d": "2025-12-30 02:01:15", "e": null}, {"d": "2025-12-30 01:30:20", "e": null}, {"d": "2025-12-30 00:59:55", "e": null}, {"d": "2025-12-30 00:29:48", "e": null}, {"d": "2025-12-30 00:00:02", "e": null}, {"d": "2025-12-29 23:28:54", "e": null}, {"d": "2025-12-29 22:59:27", "e": null}, {"d": "2025-12-29 15:50:14", "e": null}, {"d": "2025-12-29 12:01:10", "e": null}, {"d": "2025-12-29 04:31:53", "e": null}, {"d": "2025-12-29 04:02:07", "e": null}, {"d": "2025-12-29 03:31:43", "e": null}, {"d": "2025-12-29 03:01:09", "e": null}, {"d": "2025-12-29 02:31:22", "e": null}, {"d": "2025-12-29 02:01:16", "e": null}, {"d": "2025-12-29 01:30:04", "e": null}, {"d": "2025-12-29 01:00:05", "e": null}, {"d": "2025-12-29 00:30:20", "e": null}]}; 
+    const HISTORY = {"303001": [{"d": "2025-12-30 15:34:14", "e": null}, {"d": "2025-12-30 15:03:56", "e": null}, {"d": "2025-12-30 14:33:58", "e": null}, {"d": "2025-12-30 14:03:31", "e": null}, {"d": "2025-12-30 13:33:33", "e": null}, {"d": "2025-12-30 13:03:45", "e": null}, {"d": "2025-12-30 12:32:31", "e": null}, {"d": "2025-12-30 12:01:44", "e": null}, {"d": "2025-12-30 11:31:19", "e": null}, {"d": "2025-12-30 11:01:31", "e": null}, {"d": "2025-12-30 10:31:43", "e": null}, {"d": "2025-12-30 10:00:29", "e": null}, {"d": "2025-12-30 09:30:31", "e": null}, {"d": "2025-12-30 09:00:06", "e": null}, {"d": "2025-12-30 08:29:39", "e": null}, {"d": "2025-12-30 07:59:53", "e": null}, {"d": "2025-12-30 07:28:40", "e": null}, {"d": "2025-12-30 06:58:43", "e": null}, {"d": "2025-12-30 06:28:46", "e": null}, {"d": "2025-12-30 05:58:10", "e": null}, {"d": "2025-12-30 05:28:23", "e": null}, {"d": "2025-12-30 04:58:27", "e": null}, {"d": "2025-12-30 04:27:14", "e": null}, {"d": "2025-12-30 03:57:28", "e": null}, {"d": "2025-12-30 03:26:54", "e": null}, {"d": "2025-12-30 02:57:09", "e": null}, {"d": "2025-12-30 02:27:23", "e": null}, {"d": "2025-12-30 01:56:58", "e": null}, {"d": "2025-12-30 01:26:03", "e": null}, {"d": "2025-12-30 00:55:36", "e": null}, {"d": "2025-12-30 00:25:32", "e": null}, {"d": "2025-12-29 23:55:45", "e": null}, {"d": "2025-12-29 23:24:37", "e": null}, {"d": "2025-12-29 22:55:11", "e": null}, {"d": "2025-12-29 22:24:36", "e": null}, {"d": "2025-12-29 21:54:20", "e": null}, {"d": "2025-12-29 21:23:40", "e": null}, {"d": "2025-12-29 20:54:43", "e": null}, {"d": "2025-12-29 20:24:05", "e": null}, {"d": "2025-12-29 19:54:19", "e": null}, {"d": "2025-12-29 19:23:54", "e": null}, {"d": "2025-12-29 16:22:36", "e": null}, {"d": "2025-12-29 15:52:50", "e": null}, {"d": "2025-12-29 15:21:35", "e": null}, {"d": "2025-12-29 14:52:37", "e": null}, {"d": "2025-12-29 14:22:13", "e": null}, {"d": "2025-12-29 13:51:37", "e": null}, {"d": "2025-12-29 13:21:50", "e": null}, {"d": "2025-12-29 12:50:27", "e": null}, {"d": "2025-12-29 12:21:18", "e": null}, {"d": "2025-12-29 11:50:06", "e": null}, {"d": "2025-12-29 11:20:09", "e": null}, {"d": "2025-12-29 10:50:06", "e": null}, {"d": "2025-12-29 10:20:16", "e": null}, {"d": "2025-12-29 09:49:02", "e": null}, {"d": "2025-12-29 09:19:16", "e": null}, {"d": "2025-12-29 08:48:50", "e": null}, {"d": "2025-12-29 08:18:12", "e": null}, {"d": "2025-12-29 07:48:23", "e": null}, {"d": "2025-12-29 07:17:57", "e": null}, {"d": "2025-12-29 07:17:57", "e": null}, {"d": "2025-12-29 06:48:11", "e": null}, {"d": "2025-12-29 06:48:11", "e": null}, {"d": "2025-12-29 06:16:58", "e": null}, {"d": "2025-12-29 06:16:58", "e": null}, {"d": "2025-12-29 05:47:50", "e": null}, {"d": "2025-12-29 05:47:50", "e": null}, {"d": "2025-12-29 05:15:34", "e": null}, {"d": "2025-12-29 05:15:34", "e": null}, {"d": "2025-12-29 04:45:09", "e": null}, {"d": "2025-12-29 04:45:09", "e": null}, {"d": "2025-12-29 04:15:14", "e": null}, {"d": "2025-12-29 04:15:14", "e": null}, {"d": "2025-12-29 03:44:50", "e": null}, {"d": "2025-12-29 03:44:50", "e": null}, {"d": "2025-12-29 03:14:26", "e": null}, {"d": "2025-12-29 03:14:26", "e": null}, {"d": "2025-12-29 02:44:29", "e": null}, {"d": "2025-12-29 02:44:29", "e": null}, {"d": "2025-12-29 02:14:32", "e": null}, {"d": "2025-12-29 02:14:32", "e": null}, {"d": "2025-12-29 01:44:37", "e": null}, {"d": "2025-12-29 01:44:37", "e": null}, {"d": "2025-12-29 01:14:01", "e": null}, {"d": "2025-12-29 01:14:01", "e": null}, {"d": "2025-12-29 00:44:15", "e": null}, {"d": "2025-12-29 00:44:15", "e": null}, {"d": "2025-12-29 00:13:03", "e": null}, {"d": "2025-12-29 00:13:03", "e": null}, {"d": "2025-12-28 23:44:04", "e": null}, {"d": "2025-12-28 23:13:39", "e": null}, {"d": "2025-12-28 22:42:27", "e": null}, {"d": "2025-12-28 22:11:55", "e": null}, {"d": "2025-12-28 21:41:18", "e": null}, {"d": "2025-12-28 21:11:30", "e": null}, {"d": "2025-12-28 20:41:43", "e": null}, {"d": "2025-12-28 20:11:56", "e": null}, {"d": "2025-12-28 19:42:09", "e": null}, {"d": "2025-12-28 19:11:33", "e": null}, {"d": "2025-12-28 18:41:45", "e": null}, {"d": "2025-12-28 18:11:58", "e": null}, {"d": "2025-12-28 17:41:33", "e": null}, {"d": "2025-12-28 17:11:45", "e": null}, {"d": "2025-12-28 16:41:11", "e": null}, {"d": "2025-12-28 16:09:59", "e": null}, {"d": "2025-12-28 15:39:50", "e": null}, {"d": "2025-12-28 15:10:02", "e": null}, {"d": "2025-12-28 14:39:38", "e": null}, {"d": "2025-12-28 14:09:02", "e": null}, {"d": "2025-12-28 13:39:15", "e": null}, {"d": "2025-12-28 13:07:49", "e": null}, {"d": "2025-12-28 12:37:24", "e": null}, {"d": "2025-12-28 12:07:24", "e": null}, {"d": "2025-12-28 11:37:53", "e": null}, {"d": "2025-12-28 11:07:22", "e": null}, {"d": "2025-12-28 10:37:12", "e": null}, {"d": "2025-12-28 10:07:24", "e": null}, {"d": "2025-12-28 09:36:59", "e": null}, {"d": "2025-12-28 09:05:44", "e": null}, {"d": "2025-12-28 08:35:19", "e": null}, {"d": "2025-12-28 08:05:31", "e": null}, {"d": "2025-12-28 07:34:54", "e": null}, {"d": "2025-12-28 07:05:05", "e": null}, {"d": "2025-12-28 06:35:18", "e": null}, {"d": "2025-12-28 06:04:05", "e": null}, {"d": "2025-12-28 05:35:07", "e": null}, {"d": "2025-12-28 05:04:42", "e": null}, {"d": "2025-12-28 04:34:16", "e": null}, {"d": "2025-12-28 04:04:18", "e": null}, {"d": "2025-12-28 03:32:53", "e": null}, {"d": "2025-12-28 03:03:44", "e": null}, {"d": "2025-12-28 02:32:30", "e": null}, {"d": "2025-12-28 02:02:43", "e": null}, {"d": "2025-12-28 01:32:19", "e": null}, {"d": "2025-12-28 01:02:33", "e": null}, {"d": "2025-12-28 00:32:08", "e": null}, {"d": "2025-12-28 00:01:44", "e": null}, {"d": "2025-12-27 23:31:19", "e": null}, {"d": "2025-12-27 23:01:21", "e": null}, {"d": "2025-12-27 22:30:46", "e": null}, {"d": "2025-12-27 22:00:38", "e": null}, {"d": "2025-12-27 21:30:52", "e": null}, {"d": "2025-12-27 21:00:17", "e": null}, {"d": "2025-12-27 20:30:29", "e": null}, {"d": "2025-12-27 20:00:43", "e": null}, {"d": "2025-12-27 19:30:18", "e": null}, {"d": "2025-12-27 18:58:49", "e": null}, {"d": "2025-12-27 15:33:29", "e": null}, {"d": "2025-12-27 15:03:02", "e": null}, {"d": "2025-12-27 14:33:03", "e": null}, {"d": "2025-12-27 14:02:40", "e": null}, {"d": "2025-12-27 13:31:14", "e": null}, {"d": "2025-12-27 13:00:49", "e": null}, {"d": "2025-12-27 12:31:03", "e": null}, {"d": "2025-12-27 12:00:53", "e": null}, {"d": "2025-12-27 11:31:05", "e": null}, {"d": "2025-12-27 10:59:51", "e": null}, {"d": "2025-12-27 10:29:26", "e": null}, {"d": "2025-12-27 09:59:39", "e": null}, {"d": "2025-12-27 09:29:42", "e": null}, {"d": "2025-12-27 08:59:45", "e": null}, {"d": "2025-12-27 08:29:17", "e": null}, {"d": "2025-12-27 07:59:28", "e": null}, {"d": "2025-12-27 07:28:05", "e": null}, {"d": "2025-12-27 06:57:40", "e": null}, {"d": "2025-12-27 06:27:53", "e": null}, {"d": "2025-12-27 05:57:29", "e": null}, {"d": "2025-12-27 05:27:03", "e": null}, {"d": "2025-12-27 04:56:38", "e": null}, {"d": "2025-12-27 04:27:27", "e": null}, {"d": "2025-12-27 03:56:14", "e": null}, {"d": "2025-12-27 03:25:56", "e": null}, {"d": "2025-12-27 02:55:58", "e": null}, {"d": "2025-12-27 02:25:34", "e": null}, {"d": "2025-12-27 01:55:46", "e": null}, {"d": "2025-12-27 01:25:21", "e": null}, {"d": "2025-12-27 00:54:59", "e": null}, {"d": "2025-12-27 00:24:51", "e": null}, {"d": "2025-12-26 23:54:27", "e": null}, {"d": "2025-12-26 23:25:08", "e": null}, {"d": "2025-12-26 22:54:43", "e": null}, {"d": "2025-12-26 22:24:45", "e": null}, {"d": "2025-12-26 21:53:42", "e": null}, {"d": "2025-12-26 21:24:28", "e": null}, {"d": "2025-12-26 20:54:03", "e": null}, {"d": "2025-12-26 20:24:30", "e": null}, {"d": "2025-12-26 19:53:55", "e": null}, {"d": "2025-12-26 19:23:43", "e": null}, {"d": "2025-12-26 18:53:53", "e": null}, {"d": "2025-12-26 18:23:44", "e": null}, {"d": "2025-12-26 17:52:31", "e": null}, {"d": "2025-12-26 17:51:40", "e": null}, {"d": "2025-12-26 16:21:36", "e": null}, {"d": "2025-12-26 15:51:50", "e": null}, {"d": "2025-12-26 15:21:24", "e": null}, {"d": "2025-12-26 14:50:45", "e": null}, {"d": "2025-12-26 14:20:57", "e": null}, {"d": "2025-12-26 13:50:30", "e": null}, {"d": "2025-12-26 13:20:04", "e": null}, {"d": "2025-12-26 12:50:15", "e": null}, {"d": "2025-12-26 12:20:15", "e": null}, {"d": "2025-12-26 11:50:03", "e": null}, {"d": "2025-12-26 11:19:40", "e": null}, {"d": "2025-12-26 10:49:39", "e": null}, {"d": "2025-12-26 10:19:00", "e": null}, {"d": "2025-12-26 09:49:11", "e": null}, {"d": "2025-12-26 09:19:22", "e": null}, {"d": "2025-12-26 08:47:54", "e": null}, {"d": "2025-12-26 08:18:54", "e": null}, {"d": "2025-12-26 07:48:29", "e": null}, {"d": "2025-12-26 07:18:27", "e": null}, {"d": "2025-12-26 06:48:01", "e": null}, {"d": "2025-12-26 06:17:58", "e": null}, {"d": "2025-12-26 05:46:42", "e": null}, {"d": "2025-12-26 05:16:53", "e": null}, {"d": "2025-12-26 04:46:27", "e": null}, {"d": "2025-12-26 04:16:38", "e": null}, {"d": "2025-12-26 03:45:22", "e": null}, {"d": "2025-12-26 03:16:12", "e": null}, {"d": "2025-12-26 02:44:57", "e": null}, {"d": "2025-12-26 02:15:07", "e": null}, {"d": "2025-12-26 01:45:18", "e": null}, {"d": "2025-12-26 01:15:04", "e": null}, {"d": "2025-12-26 00:44:37", "e": null}, {"d": "2025-12-26 00:14:35", "e": null}, {"d": "2025-12-25 23:44:35", "e": null}, {"d": "2025-12-25 23:14:34", "e": null}, {"d": "2025-12-25 22:44:08", "e": null}, {"d": "2025-12-25 22:13:41", "e": null}, {"d": "2025-12-25 21:43:53", "e": null}, {"d": "2025-12-25 21:12:27", "e": null}, {"d": "2025-12-25 20:42:26", "e": null}, {"d": "2025-12-25 20:11:59", "e": null}, {"d": "2025-12-25 19:41:56", "e": null}, {"d": "2025-12-25 19:11:31", "e": null}, {"d": "2025-12-25 18:42:32", "e": null}, {"d": "2025-12-25 18:11:16", "e": null}, {"d": "2025-12-25 17:42:05", "e": null}, {"d": "2025-12-25 17:10:50", "e": null}, {"d": "2025-12-25 16:40:48", "e": null}, {"d": "2025-12-25 16:10:23", "e": null}, {"d": "2025-12-25 15:39:57", "e": null}, {"d": "2025-12-25 15:09:34", "e": null}, {"d": "2025-12-25 14:39:48", "e": null}, {"d": "2025-12-25 14:09:13", "e": null}, {"d": "2025-12-25 13:39:26", "e": null}, {"d": "2025-12-25 13:09:29", "e": null}, {"d": "2025-12-25 12:39:31", "e": null}, {"d": "2025-12-25 12:09:08", "e": null}, {"d": "2025-12-25 11:38:58", "e": null}, {"d": "2025-12-25 11:09:00", "e": null}, {"d": "2025-12-25 10:38:36", "e": null}, {"d": "2025-12-25 10:08:10", "e": null}, {"d": "2025-12-25 09:37:45", "e": null}, {"d": "2025-12-25 09:07:40", "e": null}, {"d": "2025-12-25 08:37:54", "e": null}, {"d": "2025-12-25 08:07:11", "e": null}, {"d": "2025-12-25 07:36:51", "e": null}, {"d": "2025-12-25 07:06:53", "e": null}, {"d": "2025-12-25 06:36:29", "e": null}, {"d": "2025-12-25 06:06:10", "e": null}, {"d": "2025-12-25 05:36:13", "e": null}, {"d": "2025-12-25 05:05:00", "e": null}, {"d": "2025-12-25 04:34:36", "e": null}, {"d": "2025-12-25 04:04:48", "e": null}, {"d": "2025-12-25 03:34:23", "e": null}, {"d": "2025-12-25 03:04:26", "e": null}, {"d": "2025-12-25 02:34:03", "e": null}, {"d": "2025-12-25 02:03:39", "e": null}, {"d": "2025-12-25 01:33:42", "e": null}, {"d": "2025-12-25 01:03:56", "e": null}, {"d": "2025-12-25 00:33:32", "e": null}, {"d": "2025-12-25 00:02:56", "e": null}], "303002": [{"d": "2025-12-30 12:01:30", "e": null}, {"d": "2025-12-30 04:32:31", "e": null}, {"d": "2025-12-30 04:02:45", "e": null}, {"d": "2025-12-30 03:32:11", "e": null}, {"d": "2025-12-30 03:02:26", "e": null}, {"d": "2025-12-30 02:31:39", "e": null}, {"d": "2025-12-30 02:01:15", "e": null}, {"d": "2025-12-30 01:30:20", "e": null}, {"d": "2025-12-30 00:59:55", "e": null}, {"d": "2025-12-30 00:29:48", "e": null}, {"d": "2025-12-30 00:00:02", "e": null}, {"d": "2025-12-29 23:28:54", "e": null}, {"d": "2025-12-29 22:59:27", "e": null}, {"d": "2025-12-29 15:50:14", "e": null}, {"d": "2025-12-29 12:01:10", "e": null}, {"d": "2025-12-29 04:31:53", "e": null}, {"d": "2025-12-29 04:31:53", "e": null}, {"d": "2025-12-29 04:02:07", "e": null}, {"d": "2025-12-29 04:02:07", "e": null}, {"d": "2025-12-29 03:31:43", "e": null}, {"d": "2025-12-29 03:31:43", "e": null}, {"d": "2025-12-29 03:01:09", "e": null}, {"d": "2025-12-29 03:01:09", "e": null}, {"d": "2025-12-29 02:31:22", "e": null}, {"d": "2025-12-29 02:31:22", "e": null}, {"d": "2025-12-29 02:01:16", "e": null}, {"d": "2025-12-29 02:01:16", "e": null}, {"d": "2025-12-29 01:30:04", "e": null}, {"d": "2025-12-29 01:30:04", "e": null}, {"d": "2025-12-29 01:00:05", "e": null}, {"d": "2025-12-29 01:00:05", "e": null}, {"d": "2025-12-29 00:30:20", "e": null}, {"d": "2025-12-29 00:30:20", "e": null}, {"d": "2025-12-28 23:59:56", "e": null}, {"d": "2025-12-28 23:29:31", "e": null}, {"d": "2025-12-28 22:59:45", "e": null}, {"d": "2025-12-28 11:46:55", "e": null}, {"d": "2025-12-28 11:45:50", "e": null}, {"d": "2025-12-28 04:34:09", "e": null}, {"d": "2025-12-28 04:04:11", "e": null}, {"d": "2025-12-28 03:32:47", "e": null}, {"d": "2025-12-28 03:03:38", "e": null}, {"d": "2025-12-28 02:32:24", "e": null}, {"d": "2025-12-28 02:02:38", "e": null}, {"d": "2025-12-28 01:32:12", "e": null}, {"d": "2025-12-28 01:02:26", "e": null}, {"d": "2025-12-28 00:32:02", "e": null}, {"d": "2025-12-28 00:01:37", "e": null}, {"d": "2025-12-27 23:31:12", "e": null}, {"d": "2025-12-27 23:01:15", "e": null}, {"d": "2025-12-27 19:10:24", "e": null}, {"d": "2025-12-27 12:00:21", "e": null}, {"d": "2025-12-27 04:32:26", "e": null}, {"d": "2025-12-27 04:01:13", "e": null}, {"d": "2025-12-27 03:30:54", "e": null}, {"d": "2025-12-27 03:00:56", "e": null}, {"d": "2025-12-27 02:30:32", "e": null}, {"d": "2025-12-27 02:00:44", "e": null}, {"d": "2025-12-27 01:30:18", "e": null}, {"d": "2025-12-27 01:01:06", "e": null}, {"d": "2025-12-27 00:30:47", "e": null}, {"d": "2025-12-26 23:59:24", "e": null}, {"d": "2025-12-26 23:30:15", "e": null}, {"d": "2025-12-26 22:59:00", "e": null}, {"d": "2025-12-26 18:38:32", "e": null}, {"d": "2025-12-26 12:01:21", "e": null}, {"d": "2025-12-26 04:32:29", "e": null}, {"d": "2025-12-26 04:02:41", "e": null}, {"d": "2025-12-26 03:32:14", "e": null}, {"d": "2025-12-26 03:02:14", "e": null}, {"d": "2025-12-26 02:31:47", "e": null}, {"d": "2025-12-26 02:01:59", "e": null}, {"d": "2025-12-26 01:30:43", "e": null}, {"d": "2025-12-26 01:01:30", "e": null}, {"d": "2025-12-26 00:31:17", "e": null}, {"d": "2025-12-26 00:00:01", "e": null}, {"d": "2025-12-25 23:29:48", "e": null}, {"d": "2025-12-25 22:59:58", "e": null}, {"d": "2025-12-25 15:48:25", "e": null}, {"d": "2025-12-25 04:32:44", "e": null}, {"d": "2025-12-25 04:02:57", "e": null}, {"d": "2025-12-25 03:32:31", "e": null}, {"d": "2025-12-25 03:02:35", "e": null}, {"d": "2025-12-25 02:32:10", "e": null}, {"d": "2025-12-25 02:01:46", "e": null}, {"d": "2025-12-25 01:31:48", "e": null}, {"d": "2025-12-25 01:02:02", "e": null}, {"d": "2025-12-25 00:31:38", "e": null}, {"d": "2025-12-25 00:01:01", "e": null}]}; 
     const datePicker = document.getElementById('datePicker');
     const searchInput = document.getElementById('globalSearch');
     const metaFilter = document.getElementById('metaFilter');
     let chartTrend = null;
     let chartStatus = null;
+
     function init() {
         datePicker.addEventListener('change', renderDashboard);
         searchInput.addEventListener('keyup', applyFilters);
         metaFilter.addEventListener('change', applyFilters);
         renderDashboard();
     }
-    function toggleTheme() { document.body.setAttribute('data-theme', document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); }
+
+    function toggleTheme() {
+        const current = document.body.getAttribute('data-theme');
+        document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
     function switchTab(id) {
         document.querySelectorAll('.view-section').forEach(e => e.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(e => e.classList.remove('active'));
         document.getElementById(id).classList.add('active');
+        
         const btnMap = {'tab-online':0, 'tab-critical':1, 'tab-offline':2};
         if(btnMap[id] !== undefined) document.querySelectorAll('.tab-btn')[btnMap[id]].classList.add('active');
     }
+
     function getLatestEodVersion() {
         let maxVer = 0.0;
-        Object.values(METADATA).forEach(m => { let v = parseFloat(m.eod); if(!isNaN(v) && v > maxVer) maxVer = v; });
+        Object.values(METADATA).forEach(m => { 
+            let v = parseFloat(m.eod); 
+            if(!isNaN(v) && v > maxVer) maxVer = v; 
+        });
         return maxVer;
     }
+
+    // --- FUNÇÃO CRÍTICA PARA DATAS ---
+    // Cria strings de data YYYY-MM-DD para os últimos X dias
+    // Sem usar new Date() para evitar confusão de Timezone
+    function getDatesInRange(startDateStr, daysBack) {
+        const dates = [];
+        const parts = startDateStr.split('-');
+        // Cria data segura em UTC-Local
+        const baseDate = new Date(parseInt(parts[0]), parseInt(parts[1])-1, parseInt(parts[2]));
+        
+        for (let i = 0; i < daysBack; i++) {
+            const d = new Date(baseDate);
+            d.setDate(baseDate.getDate() - i);
+            
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            dates.push(`${year}-${month}-${day}`);
+        }
+        return dates; 
+    }
+
     function renderDashboard() {
-        const selectedDateStr = datePicker.value;
-        const selectedDateEnd = new Date(selectedDateStr + 'T23:59:59');
-        const selectedDateStart = new Date(selectedDateStr + 'T00:00:00');
-        const lists = { online: document.getElementById('list-online'), offline: document.getElementById('list-offline'), critical: document.getElementById('list-critical') };
+        const selectedDateStr = datePicker.value; // YYYY-MM-DD
+        const lists = { 
+            online: document.getElementById('list-online'), 
+            offline: document.getElementById('list-offline'), 
+            critical: document.getElementById('list-critical') 
+        };
         Object.values(lists).forEach(l => l.innerHTML = '');
+
         let counts = { online: 0, offline: 0, critical: 0 };
         const maxEod = getLatestEodVersion();
+
         FROTA.forEach(veiculo => {
             const logs = HISTORY[veiculo] || [];
             let lastLog = null;
-            for (let log of logs) { let logDate = new Date(log.d); if (logDate <= selectedDateEnd) { lastLog = log; break; } }
+
+            // --- LÓGICA DE BUSCA NO HISTÓRICO ---
+            // Como logs.d é string "YYYY-MM-DD HH:MM:SS", comparação de string funciona
+            // Buscamos o primeiro log que seja <= Data Selecionada (Fim do dia)
+            // Como selectedDateStr é YYYY-MM-DD, adicionamos o fim do dia
+            const limitStr = selectedDateStr + " 23:59:59";
+            
+            for (let log of logs) { 
+                if (log.d <= limitStr) { 
+                    lastLog = log; 
+                    break; 
+                } 
+            }
+
             const meta = METADATA[veiculo] || {};
             const eodVal = parseFloat(meta.eod) || 0;
             const isOutdated = eodVal < maxEod;
             const rowAttr = `data-prefix="${veiculo}" data-outdated="${isOutdated}"`;
+
+            // Caso 1: Nunca comunicou (ou não tem dados antes desta data)
             if (!lastLog) {
                 counts.offline++;
                 const row = `<tr ${rowAttr}><td><span class="status-badge badge-offline">SEM DADOS</span></td><td><strong>${veiculo}</strong></td><td>Nunca</td><td>-</td></tr>`;
                 lists.offline.insertAdjacentHTML('beforeend', row);
                 return;
             }
-            const lastDate = new Date(lastLog.d);
-            const isToday = (lastDate >= selectedDateStart && lastDate <= selectedDateEnd);
+
+            // Caso 2: Comunicou. Verificamos se foi NA DATA SELECIONADA.
+            // lastLog.d formato: "YYYY-MM-DD HH:MM:SS"
+            // Pegamos apenas a parte da data "YYYY-MM-DD" para comparar
+            const logDateOnly = lastLog.d.split(' ')[0];
+            const isToday = (logDateOnly === selectedDateStr);
+
             if (isToday) {
                 if (lastLog.e) {
                     counts.critical++;
@@ -166,19 +223,27 @@
                 }
             } else {
                 counts.offline++;
-                const diffTime = Math.abs(selectedDateStart - new Date(lastLog.d.split(' ')[0] + 'T00:00:00'));
+                // Cálculo de dias inativos
+                // Usamos diferença de tempo simples
+                const d1 = new Date(selectedDateStr);
+                const d2 = new Date(logDateOnly);
+                const diffTime = Math.abs(d1 - d2);
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+                
                 const row = `<tr ${rowAttr} onclick="showDetails('${veiculo}')"><td><span class="status-badge badge-offline">OFFLINE</span></td><td><strong>${veiculo}</strong></td><td>${formatDateBr(lastLog.d)}</td><td>${diffDays} dia(s) atrás</td></tr>`;
                 lists.offline.insertAdjacentHTML('beforeend', row);
             }
         });
+
         updateCounters(counts);
         applyFilters(); 
-        renderCharts(counts, selectedDateStr);
+        renderCharts(selectedDateStr);
     }
+
     function applyFilters() {
         const term = searchInput.value.toUpperCase();
         const filterType = metaFilter.value;
+
         const filterItem = (el) => {
             const prefix = el.getAttribute('data-prefix').toUpperCase();
             const outdated = el.getAttribute('data-outdated') === 'true';
@@ -190,69 +255,148 @@
         document.querySelectorAll('.v-card').forEach(filterItem);
         document.querySelectorAll('tbody tr').forEach(filterItem);
     }
+
     function updateCounters(counts) {
         document.getElementById('cnt-online').innerText = counts.online;
         document.getElementById('cnt-offline').innerText = counts.offline;
         document.getElementById('cnt-critical').innerText = counts.critical;
+        
         document.getElementById('empty-online').style.display = counts.online === 0 ? 'block' : 'none';
         document.getElementById('empty-offline').style.display = counts.offline === 0 ? 'block' : 'none';
         document.getElementById('empty-critical').style.display = counts.critical === 0 ? 'block' : 'none';
     }
-    function renderCharts(counts, dateStr) {
+
+    function renderCharts(dateStr) {
+        const onl = parseInt(document.getElementById('cnt-online').innerText);
+        const crit = parseInt(document.getElementById('cnt-critical').innerText);
+        const off = parseInt(document.getElementById('cnt-offline').innerText);
+        
         const ctxStatus = document.getElementById('statusChart').getContext('2d');
         if(chartStatus) chartStatus.destroy();
         chartStatus = new Chart(ctxStatus, {
             type: 'doughnut',
-            data: { labels: ['Online', 'Erro/Crítico', 'Offline'], datasets: [{ data: [counts.online, counts.critical, counts.offline], backgroundColor: ['#27ae60', '#c0392b', '#f39c12'] }] },
+            data: { 
+                labels: ['Online', 'Erro/Crítico', 'Offline'], 
+                datasets: [{ data: [onl, crit, off], backgroundColor: ['#27ae60', '#c0392b', '#f39c12'] }] 
+            },
             options: { maintainAspectRatio: false, plugins: { title: { display: true, text: 'Status Atual' } } }
         });
-        const labels = []; const dataOnline = []; const dataErrors = [];
-        for(let i=29; i>=0; i--) {
-            const d = new Date(dateStr); d.setDate(d.getDate() - i);
-            const isoDate = d.toISOString().split('T')[0];
-            labels.push(isoDate.split('-').reverse().slice(0,2).join('/')); 
-            let dayOnline = 0; let dayError = 0;
+
+        // Gráfico de Tendência (30 dias)
+        const dateList = getDatesInRange(dateStr, 30); // [Hoje, Ontem...] (Strings YYYY-MM-DD)
+        const labels = [];
+        const dataOnline = [];
+        const dataErrors = [];
+
+        // Loop Reverso (Do mais antigo para o mais recente)
+        for(let i = dateList.length - 1; i >= 0; i--) {
+            const isoDate = dateList[i]; // "YYYY-MM-DD"
+            const parts = isoDate.split('-');
+            labels.push(`${parts[2]}/${parts[1]}`);
+
+            let dayOnline = 0;
+            let dayError = 0;
+
             FROTA.forEach(v => {
                 const logs = HISTORY[v] || [];
+                // Busca EXATA pela string da data
+                // logs[x].d é "YYYY-MM-DD HH:MM:SS"
+                // .startsWith("YYYY-MM-DD") funciona perfeitamente sem conversão
                 const log = logs.find(l => l.d.startsWith(isoDate));
-                if(log) { if(log.e) dayError++; else dayOnline++; }
+                
+                if(log) {
+                    if(log.e) dayError++;
+                    else dayOnline++;
+                }
             });
-            dataOnline.push(dayOnline); dataErrors.push(dayError);
+            dataOnline.push(dayOnline);
+            dataErrors.push(dayError);
         }
+
         const ctxTrend = document.getElementById('trendChart').getContext('2d');
         if(chartTrend) chartTrend.destroy();
         chartTrend = new Chart(ctxTrend, {
             type: 'line',
-            data: { labels: labels, datasets: [ { label: 'Online (Sucesso)', data: dataOnline, borderColor: '#27ae60', tension: 0.1 }, { label: 'Com Erro', data: dataErrors, borderColor: '#c0392b', tension: 0.1 } ] },
-            options: { maintainAspectRatio: false, interaction: { mode: 'index', intersect: false }, plugins: { title: { display: true, text: 'Comunicações nos últimos 30 dias' } }, scales: { y: { beginAtZero: true } } }
+            data: { 
+                labels: labels, 
+                datasets: [ 
+                    { label: 'Online (Sucesso)', data: dataOnline, borderColor: '#27ae60', tension: 0.1, fill: false }, 
+                    { label: 'Com Erro', data: dataErrors, borderColor: '#c0392b', tension: 0.1, fill: false } 
+                ] 
+            },
+            options: { 
+                maintainAspectRatio: false, 
+                interaction: { mode: 'index', intersect: false }, 
+                plugins: { title: { display: true, text: 'Comunicações nos últimos 30 dias' } }, 
+                scales: { y: { beginAtZero: true } } 
+            }
         });
     }
+
     function sortTable(n, tableId) {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
         table = document.getElementById(tableId).parentNode; 
         switching = true; dir = "asc"; 
         while (switching) {
-            switching = false; rows = table.rows;
+            switching = false;
+            rows = table.rows;
             for (i = 1; i < (rows.length - 1); i++) {
-                shouldSwitch = false; x = rows[i].getElementsByTagName("TD")[n]; y = rows[i + 1].getElementsByTagName("TD")[n];
-                if (dir == "asc") { if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) { shouldSwitch = true; break; } } else { if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) { shouldSwitch = true; break; } }
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n]; 
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                if (dir == "asc") { 
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) { shouldSwitch = true; break; } 
+                } else { 
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) { shouldSwitch = true; break; } 
+                }
             }
-            if (shouldSwitch) { rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); switching = true; switchcount ++; } else { if (switchcount == 0 && dir == "asc") { dir = "desc"; switching = true; } }
+            if (shouldSwitch) { 
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true; switchcount ++; 
+            } else { 
+                if (switchcount == 0 && dir == "asc") { dir = "desc"; switching = true; } 
+            }
         }
     }
-    function formatDateBr(isoStr) { if(!isoStr || isoStr === 'N/A') return 'N/A'; const [date, time] = isoStr.split(' '); return date.split('-').reverse().join('/') + ' ' + time.substring(0,5); }
+
+    function formatDateBr(isoStr) { 
+        if(!isoStr || isoStr === 'N/A') return 'N/A';
+        const [date, time] = isoStr.split(' '); 
+        return date.split('-').reverse().join('/') + ' ' + time.substring(0,5);
+    }
+
     const modal = document.getElementById('modalInfo');
+    
     function showDetails(veiculo) {
         const meta = METADATA[veiculo] || {};
         const logs = HISTORY[veiculo] || [];
         const last = logs[0] || {d:'N/A'};
+        
         let erroHtml = last.e ? `<p style="color:red"><strong>⚠️ Erro Recente:</strong> ${last.e}</p>` : '';
+        
+        let histHtml = '<hr><h4>Últimas Comunicações:</h4><ul style="font-size:0.9rem; padding-left:20px;">';
+        logs.slice(0, 10).forEach(l => {
+             const status = l.e ? '🔴' : '🟢';
+             histHtml += `<li>${status} ${formatDateBr(l.d)}</li>`;
+        });
+        histHtml += '</ul>';
+
         document.getElementById('m-title').innerText = `Veículo ${veiculo}`;
-        document.getElementById('m-body').innerHTML = `<p><strong>Última Comunicação:</strong> ${formatDateBr(last.d)}</p>${erroHtml}<hr><p><strong>Série:</strong> ${meta.serie}</p><p><strong>Versão:</strong> ${meta.versao}</p><p><strong>EOD:</strong> ${meta.eod}</p>`;
+        document.getElementById('m-body').innerHTML = `
+            <p><strong>Última Comunicação:</strong> ${formatDateBr(last.d)}</p>
+            ${erroHtml}
+            <hr>
+            <p><strong>Série:</strong> ${meta.serie}</p>
+            <p><strong>Versão:</strong> ${meta.versao}</p>
+            <p><strong>EOD:</strong> ${meta.eod}</p>
+            ${histHtml}
+        `;
         modal.style.display = "block";
     }
+
     function closeModal() { modal.style.display = "none"; }
     window.onclick = function(e) { if(e.target == modal) closeModal(); }
+
     init();
 </script>
 </body>
